@@ -81,8 +81,8 @@ export default function App() {
             <>
               <h1>
                 Here the paradox is demonstrated. According to Zeno, Achilles
-                never would never caught the tortoise because he needs to get to
-                the tortoise's previous location before moving again.
+                would never caught the tortoise because he needs to get to the
+                tortoise's previous location before moving again.
               </h1>
               <ZenosParadox />
               <h1>
