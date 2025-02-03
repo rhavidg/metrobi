@@ -72,12 +72,12 @@ export default function App() {
             borderRadius: "8px",
           }}
         >
-          {taskDisplay && taskDisplay == 1 && <TaskOne />}
-          {taskDisplay && taskDisplay == 2 && <TaskTwo />}
-          {taskDisplay && taskDisplay == 3 && <TaskThree />}
-          {taskDisplay && taskDisplay == 4 && <TaskFour />}
-          {taskDisplay && taskDisplay == 5 && <TaskFive />}
-          {taskDisplay && taskDisplay == 6 && (
+          {taskDisplay && taskDisplay === 1 && <TaskOne />}
+          {taskDisplay && taskDisplay === 2 && <TaskTwo />}
+          {taskDisplay && taskDisplay === 3 && <TaskThree />}
+          {taskDisplay && taskDisplay === 4 && <TaskFour />}
+          {taskDisplay && taskDisplay === 5 && <TaskFive />}
+          {taskDisplay && taskDisplay === 6 && (
             <>
               <h1>
                 Here the paradox is demonstrated. According to Zeno, Achilles
@@ -87,12 +87,13 @@ export default function App() {
               <ZenosParadox />
               <h1>
                 Here the paradox is solved using maths. Since Achilles moves on
-                a speed that is faster than the tortoise he eventually caught it
+                a speed that is faster than the tortoise he eventually catches
+                it
               </h1>
               <ZenosParadoxSolved />
             </>
           )}
-          {taskDisplay && taskDisplay == 7 && <TaskSeven />}
+          {taskDisplay && taskDisplay === 7 && <TaskSeven />}
         </Paper>
       </div>
     </>

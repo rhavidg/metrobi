@@ -38,14 +38,12 @@ export default function ZenosParadoxSolved() {
     <div>
       <div>
         <motion.div
-          className="w-10 h-10 bg-blue-500 rounded-full absolute"
           animate={{ x: achillesPosition }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
           🏃‍♂️
         </motion.div>
         <motion.div
-          className="w-10 h-10 bg-green-500 rounded-full absolute"
           animate={{ x: tortoisePosition }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >

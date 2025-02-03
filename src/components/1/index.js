@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 
 export default function TaskOne() {
-  const array = [1, 1, 2, 3, 3, 8];
-
   function findDuplicates(arr) {
     let duplicates = [];
     arr.forEach((item) => {
@@ -17,12 +15,12 @@ export default function TaskOne() {
   }
   const [duplicates, setDuplicates] = useState();
   useEffect(() => {
-    const dupes = findDuplicates(array);
+    const dupes = findDuplicates([1, 1, 2, 3, 3, 8]);
     setDuplicates(dupes);
   }, []);
   return (
     <>
-      <p>Array: {array.join(",")}</p>
+      <p>Array: {[1, 1, 2, 3, 3, 8].join(",")}</p>
       {duplicates && <p>Duplicates in array: {duplicates.join(",")}</p>}
     </>
   );
