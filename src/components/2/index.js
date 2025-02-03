@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 export default function TaskTwo() {
   const [displayItems, setDisplayItems] = useState([]);
   const [displayDelay, setDisplayDelay] = useState([]);
+  const [isFinished, setIsFinished] = useState(false);
   const array = ["a", "b", "c", "d", "e"];
 
   async function printWithDelay(arr) {
@@ -18,15 +19,19 @@ export default function TaskTwo() {
     }
   }
 
-  async function main() {}
+  async function main() {
+    await printWithDelay(array);
+    setIsFinished(true);
+  }
   useEffect(() => {
-    printWithDelay(array);
+    main();
   }, []);
   return (
     <>
       <p>Array: {array.join(",")}</p>
       <p>Item: {displayItems}</p>
       <p>Delay: {displayDelay}</p>
+      <p>{!isFinished ? "Still printing" : "Finished printing"}</p>
     </>
   );
 }
